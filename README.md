@@ -1,6 +1,6 @@
 # Zhao Jiong Personal Site
 
-赵炯的个人站点，使用 Nuxt 4、Vue 3、TypeScript 和 Tailwind CSS 构建。当前版本聚焦个人简介、经历、代表作品、文章链接和联系方式的单页展示。
+Zane 的个人站点，使用 Nuxt 4、Vue 3、TypeScript 和 Tailwind CSS 构建。当前版本聚焦个人简介、经历、代表作品、文章链接和联系方式的单页展示。
 
 ## 本地开发
 

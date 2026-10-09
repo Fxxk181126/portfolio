@@ -21,3 +21,4 @@
 - feat: About 段落支持内联强调（`font-medium text-slate-200`），数据结构改为分段数组。涉及 `app/components/AboutSection.vue`、`app/data/site.ts`。
 - fix: Experience 标题外链仅在存在 `organizationHref` 时渲染箭头图标。涉及 `app/components/ExperienceSection.vue`。
 - style: 项目卡片 GitHub 图标由 `h-4 w-4` 缩小为原站的 `h-3 w-3`；项目与文章图片尺寸对齐原站 `200×48`。涉及 `app/components/ProjectCard.vue`、`app/components/WritingSection.vue`。
+- style: 站点名统一为 Zane，移除中文名赵炯及 `englishName` 字段。涉及 `app/data/site.ts`、`app/components/AppSidebar.vue`、`nuxt.config.ts`、`README.md`。

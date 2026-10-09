@@ -13,7 +13,7 @@ defineProps<{
         v-reveal="0"
         class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl"
       >
-        <a href="/">{{ profile.name }} {{ profile.englishName }}</a>
+        <a href="/">{{ profile.name }}</a>
       </h1>
       <h2
         v-reveal="40"

@@ -55,8 +55,7 @@ export type AboutParagraph = AboutSegment[]
 
 export const profile = {
   greeting: '你好，我是',
-  name: '赵炯',
-  englishName: 'Zane',
+  name: 'Zane',
   title: '资深前端工程师',
   focus: '微前端 · 数据可视化 · AI 工程化',
   summary:
@@ -101,7 +100,7 @@ export const socialLinks: SocialLink[] = [
 
 export const aboutParagraphs: AboutParagraph[] = [
   [
-    { text: '你好！我是赵炯，一名长期工作在 B 端 SaaS 场景里的前端工程师。我习惯从业务边界开始思考架构，再把它落成可维护、可演进、可观测的系统。过去几年，我主导了 ' },
+    { text: '你好！我是 Zane，一名长期工作在 B 端 SaaS 场景里的前端工程师。我习惯从业务边界开始思考架构，再把它落成可维护、可演进、可观测的系统。过去几年，我主导了 ' },
     { text: 'BI 业务从单体应用到微前端子应用的拆分', highlight: true },
     { text: '，也在组件库、工程化工具链和团队规范上持续投入。' },
   ],
