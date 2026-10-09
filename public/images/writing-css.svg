@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Modern CSS">
+  <rect width="400" height="225" fill="#101d30"/>
+  <rect x="60" y="52" width="120" height="76" rx="7" fill="#5eead4" opacity=".24"/>
+  <rect x="94" y="86" width="120" height="76" rx="7" fill="#5eead4" opacity=".44"/>
+  <rect x="128" y="120" width="120" height="76" rx="7" fill="#5eead4" opacity=".68"/>
+  <text x="272" y="106" fill="#e2e8f0" font-family="ui-monospace, monospace" font-size="25">CSS</text>
+  <text x="272" y="142" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="16">grid</text>
+</svg>

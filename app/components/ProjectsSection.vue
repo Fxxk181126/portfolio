@@ -3,13 +3,13 @@ import { projectItems } from '~/data/site'
 </script>
 
 <template>
-  <section id="projects" class="section-anchor mt-24 md:mt-32">
-    <SectionHeading index="03" title="作品" />
+  <section id="projects" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="精选作品">
+    <SectionHeading title="Projects" />
 
-    <div class="mt-10 space-y-8">
-      <div v-for="project in projectItems" :key="project.id" v-reveal="0">
+    <ul class="group/list">
+      <li v-for="project in projectItems" :key="project.id" v-reveal="0" class="mb-12">
         <ProjectCard :project="project" />
-      </div>
-    </div>
+      </li>
+    </ul>
   </section>
 </template>

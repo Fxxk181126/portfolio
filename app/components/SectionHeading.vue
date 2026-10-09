@@ -1,25 +1,15 @@
 <script setup lang="ts">
 defineProps<{
-  index: string
   title: string
-  href?: string
-  hrefLabel?: string
 }>()
 </script>
 
 <template>
-  <div class="flex items-center gap-4">
-    <h2 class="flex items-baseline gap-3 text-2xl font-bold tracking-tight text-[#e2e8f0] sm:text-3xl">
-      <span class="font-mono text-lg text-[#64ffda] sm:text-xl">{{ index }}.</span>
+  <div
+    class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+  >
+    <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
       {{ title }}
     </h2>
-    <span class="h-px max-w-24 flex-1 bg-slate-400/20 sm:max-w-40" aria-hidden="true" />
-    <a
-      v-if="href"
-      :href="href"
-      class="link-underline shrink-0 font-mono text-xs text-[#94a3b8] transition-colors hover:text-[#64ffda] sm:text-sm"
-    >
-      {{ hrefLabel ?? '查看全部' }}
-    </a>
   </div>
 </template>

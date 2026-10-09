@@ -18,5 +18,5 @@ const icon = computed(() => icons[props.name])
 </script>
 
 <template>
-  <component :is="icon" :size="size ?? 18" aria-hidden="true" />
+  <component :is="icon" :size="size ?? 24" aria-hidden="true" />
 </template>

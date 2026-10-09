@@ -39,11 +39,19 @@ export interface ProjectItem {
 
 export interface WritingItem {
   title: string
-  date: string
-  publication: string
+  year: string
   href: string
   excerpt: string
+  image?: string
+  imageAlt?: string
 }
+
+export interface AboutSegment {
+  text: string
+  highlight?: boolean
+}
+
+export type AboutParagraph = AboutSegment[]
 
 export const profile = {
   greeting: '你好，我是',
@@ -62,7 +70,6 @@ export const navigationItems: NavigationItem[] = [
   { id: 'experience', label: '经历', number: '02' },
   { id: 'projects', label: '作品', number: '03' },
   { id: 'writing', label: '文章', number: '04' },
-  { id: 'contact', label: '联系', number: '05' },
 ]
 
 export const socialLinks: SocialLink[] = [
@@ -92,10 +99,24 @@ export const socialLinks: SocialLink[] = [
   },
 ]
 
-export const aboutParagraphs = [
-  '你好！我是赵炯，一名长期工作在 B 端 SaaS 场景里的前端工程师。我习惯从业务边界开始思考架构，再把它落成可维护、可演进、可观测的系统。过去几年，我主导了 BI 业务从单体应用到微前端子应用的拆分，也在组件库、工程化工具链和团队规范上持续投入。',
-  '可视化是我另一条主线。从 ECharts 图表到 Univer 表格、GoJS 流程图和 AntV XFlow 工作流编排，我关注的不只是呈现效果，更关注数据模型、交互表达和复杂业务中的可解释性。',
-  '最近，我把更多精力放在 AI 工程化：独立完成 HeAgent 前端，参与 Claude Code 源码级企业定制，实践 MCP 协议、Skills 体系、LLM 流式交互和 Agent 工作流。我希望 AI 不只是对话框，而是能进入业务流程的可靠协作者。',
+export const aboutParagraphs: AboutParagraph[] = [
+  [
+    { text: '你好！我是赵炯，一名长期工作在 B 端 SaaS 场景里的前端工程师。我习惯从业务边界开始思考架构，再把它落成可维护、可演进、可观测的系统。过去几年，我主导了 ' },
+    { text: 'BI 业务从单体应用到微前端子应用的拆分', highlight: true },
+    { text: '，也在组件库、工程化工具链和团队规范上持续投入。' },
+  ],
+  [
+    { text: '可视化是我另一条主线。从 ' },
+    { text: 'ECharts 图表到 Univer 表格、GoJS 流程图和 AntV XFlow 工作流编排', highlight: true },
+    { text: '，我关注的不只是呈现效果，更关注数据模型、交互表达和复杂业务中的可解释性。' },
+  ],
+  [
+    { text: '最近，我把更多精力放在 AI 工程化：独立完成 ' },
+    { text: 'HeAgent 前端', highlight: true },
+    { text: '，参与 ' },
+    { text: 'Claude Code 源码级企业定制', highlight: true },
+    { text: '，实践 MCP 协议、Skills 体系、LLM 流式交互和 Agent 工作流。我希望 AI 不只是对话框，而是能进入业务流程的可靠协作者。' },
+  ],
 ]
 
 export const experienceItems: ExperienceItem[] = [
@@ -250,26 +271,29 @@ export const projectItems: ProjectItem[] = [
 export const writingItems: WritingItem[] = [
   {
     title: 'Vue 3 Composition API 完全指南',
-    date: '2024-01-15',
-    publication: '个人博客',
+    year: '2024',
     href: 'https://fxxk181126.github.io/blog/vue3-composition-api-guide/',
     excerpt:
       '深入理解 Vue 3 Composition API 的组织方式、类型推导、逻辑复用和工程实践。',
+    image: '/images/writing-vue.svg',
+    imageAlt: 'Vue 3 Composition API 文章封面',
   },
   {
     title: '前端性能优化实战指南',
-    date: '2024-01-10',
-    publication: '个人博客',
+    year: '2024',
     href: 'https://fxxk181126.github.io/blog/frontend-performance-optimization/',
     excerpt:
       '从加载性能到运行时性能，梳理现代 Web 应用的关键指标、诊断方法和优化路径。',
+    image: '/images/writing-performance.svg',
+    imageAlt: '前端性能优化文章封面',
   },
   {
     title: '现代 CSS 技术与最佳实践',
-    date: '2024-01-05',
-    publication: '个人博客',
+    year: '2024',
     href: 'https://fxxk181126.github.io/blog/modern-css-techniques/',
     excerpt:
       '使用 Grid、Flexbox、自定义属性和容器查询构建更清晰、更灵活的界面布局。',
+    image: '/images/writing-css.svg',
+    imageAlt: '现代 CSS 技术文章封面',
   },
 ]

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Vue 3 Composition API">
+  <rect width="400" height="225" fill="#112036"/>
+  <path d="M155 70h20l25 43 25-43h20l-45 78z" fill="#5eead4"/>
+  <text x="58" y="180" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="19">Composition API</text>
+</svg>

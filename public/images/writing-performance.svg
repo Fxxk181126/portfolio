@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Frontend performance">
+  <rect width="400" height="225" fill="#132338"/>
+  <path d="M60 168 112 108l46 30 74-78 48 43" fill="none" stroke="#5eead4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="280" cy="60" r="8" fill="#e2e8f0"/>
+  <text x="56" y="202" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="19">Core Web Vitals</text>
+</svg>

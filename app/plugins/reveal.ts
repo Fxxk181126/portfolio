@@ -25,6 +25,8 @@ export default defineNuxtPlugin((nuxtApp) => {
     },
     unmounted(el: HTMLElement) {
       observer?.unobserve(el)
+      el.classList.remove('reveal', 'is-visible')
+      el.style.transitionDelay = ''
     },
     getSSRProps() {
       return {}
