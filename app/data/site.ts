@@ -243,6 +243,69 @@ export const projectItems: ProjectItem[] = [
     technologies: ['Electron', 'TypeScript', 'electron-builder', 'Local-first'],
   },
   {
+    id: 'ark-ledger',
+    title: '方舟账本 Ark Ledger',
+    description:
+      '本地优先的个人记账 Web App：账本只存在浏览器里，可安装为 PWA 离线使用，支持多账本、预算、日历视图、账单导入与加密导出。',
+    image: '/images/project-ark-ledger.svg',
+    imageAlt: '方舟账本界面示意图，展示本月支出、预算进度、最近记录列表和分析图表',
+    demoHref: 'https://ark.novastart.dpdns.org',
+    highlights: [
+      '金额全程以整数「分」存储，交易经状态机与指纹去重后写入 IndexedDB。',
+      '导出包含清单、CSV 与 SHA-256 校验，可用口令做 AES-256-GCM 整包加密。',
+      '账单导入先进入待确认队列，可批量批准或整批回滚，不直接写入正式账本。',
+    ],
+    technologies: ['React 19', 'TypeScript', 'Vite', 'IndexedDB', 'PWA', 'Web Crypto'],
+  },
+  {
+    id: 'gugong-3d',
+    title: '故宫 · 3D 漫游',
+    description:
+      '按真实尺度在浏览器中漫游故宫的 Three.js 场景：建筑、纹理与音效全部程序化生成，支持多档视角、疾跑跳跃、昼夜循环与地图传送。',
+    image: '/images/project-gugong.svg',
+    imageAlt: '故宫 3D 漫游示意图，展示中轴线上的宫殿、东西两侧宫院、位置卡片和小地图',
+    demoHref: 'https://gugong-3d.novastart.dpdns.org',
+    sourceHref: 'https://github.com/Fxxk181126/gugong-3d',
+    highlights: [
+      '单文件零构建：几何体、程序化纹理与合成音效集中在同一个 index.html 中。',
+      '按 1 单位等于 1 米还原约 753×961 米宫城，覆盖中轴线与东西六宫等 21 个命名区域。',
+      '自写分区块静态网格合并与跟随玩家的阴影相机，并加入昼夜光照和实例化人群。',
+    ],
+    technologies: ['Three.js', 'JavaScript', 'WebGL', 'Canvas 2D', 'Web Audio API'],
+  },
+  {
+    id: 'thundergap',
+    title: '雷隙 THUNDERGAP',
+    description:
+      '雷雨夜第三人称 3D 动作游戏概念原型：在收缩的雷暴穹顶下躲避落雷、收集雷纹碎片并抵达广播塔，雨幕与雷声全部由代码实时计算。',
+    image: '/images/project-thundergap.svg',
+    imageAlt: '雷隙游戏界面示意图，展示雷雨夜城市、闪电、回声脉冲环和生命体征、雷纹碎片面板',
+    demoHref: 'https://thundergap.vercel.app',
+    sourceHref: 'https://github.com/Fxxk181126/thundergap',
+    highlights: [
+      '14000 条雨丝的位置全部在顶点着色器中计算，程序化城市立面与屋顶合批为两个网格。',
+      '雨声、雷鸣与碎片提示音全部由 WebAudio 程序化合成，并用 HRTF 做空间化。',
+      '自研 AABB 碰撞、土狼时间与跳跃缓冲、相机避障和程序化跑动动画。',
+    ],
+    technologies: ['Three.js', 'JavaScript', 'GLSL', 'Web Audio API', 'Pointer Lock API'],
+  },
+  {
+    id: 'cafe-in-the-rain',
+    title: '雨夜咖啡 Cafe in the Rain',
+    description:
+      '第一人称可漫游的雨夜小巷 Three.js 场景：雨丝、水洼涟漪与霓虹倒影由自定义 GLSL 着色器实时计算，雨声与雷声全部由 Web Audio 合成。',
+    image: '/images/project-cafe-rain.svg',
+    imageAlt: '雨夜咖啡场景示意图，展示雨中的小巷、亮着暖光的咖啡店、霓虹招牌和地面积水倒影',
+    demoHref: 'https://fxxk181126.github.io/cafe-in-the-rain/',
+    sourceHref: 'https://github.com/Fxxk181126/cafe-in-the-rain',
+    highlights: [
+      'GPU 实例化雨系统：桌面端 8000 条、移动端 3000 条雨丝在跟随相机的体积内循环。',
+      '自定义水洼着色器结合噪声法线、涟漪环与立方体贴图伪反射，并叠加 Bloom 泛光。',
+      '砖墙纹理在运行时注入着色器，招牌文字用 Canvas 动态绘制，不依赖任何贴图与模型文件。',
+    ],
+    technologies: ['Three.js', 'GLSL', 'Web Audio API', 'Canvas 2D'],
+  },
+  {
     id: 'stock-platform',
     title: 'stock 量化分析平台',
     description:

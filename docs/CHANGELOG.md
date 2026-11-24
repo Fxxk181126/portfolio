@@ -22,3 +22,7 @@
 - fix: Experience 标题外链仅在存在 `organizationHref` 时渲染箭头图标。涉及 `app/components/ExperienceSection.vue`。
 - style: 项目卡片 GitHub 图标由 `h-4 w-4` 缩小为原站的 `h-3 w-3`；项目与文章图片尺寸对齐原站 `200×48`。涉及 `app/components/ProjectCard.vue`、`app/components/WritingSection.vue`。
 - style: 站点名统一为 Zane，移除中文名赵炯及 `englishName` 字段。涉及 `app/data/site.ts`、`app/components/AppSidebar.vue`、`nuxt.config.ts`、`README.md`。
+
+## 2026-11-24
+
+- feat: 作品区新增「方舟账本 Ark Ledger」「故宫 · 3D 漫游」「雷隙 THUNDERGAP」「雨夜咖啡 Cafe in the Rain」四个个人项目，排在 clipFast 之后、stock 之前，并补充四张示意图。涉及 `app/data/site.ts`、`public/images/project-ark-ledger.svg`、`public/images/project-gugong.svg`、`public/images/project-thundergap.svg`、`public/images/project-cafe-rain.svg`。
