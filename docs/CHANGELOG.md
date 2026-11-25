@@ -30,3 +30,4 @@
 ## 2026-11-25
 
 - feat: 作品区下线「stock 量化分析平台」项目，并删除不再使用的示意图。涉及 `app/data/site.ts`、删除 `public/images/project-stock.svg`。
+- feat: 作品区新增「词历 Cili」微信小程序项目，排在方舟账本之后，并补充示意图。涉及 `app/data/site.ts`、`public/images/project-cili.svg`。

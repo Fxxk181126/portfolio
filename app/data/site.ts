@@ -258,6 +258,20 @@ export const projectItems: ProjectItem[] = [
     technologies: ['React 19', 'TypeScript', 'Vite', 'IndexedDB', 'PWA', 'Web Crypto'],
   },
   {
+    id: 'cili',
+    title: '词历 Cili',
+    description:
+      '面向 CET-4 / CET-6 / 考研 / 雅思备考的背单词微信小程序：以考试倒计时驱动每日任务，用 FSRS 间隔重复排程，支持定级测试、离线作答和云端幂等同步。',
+    image: '/images/project-cili.svg',
+    imageAlt: '词历小程序界面示意图，展示考试倒计时、今日任务卡片和单词卡作答界面',
+    highlights: [
+      '业务内核 @cili/core 为纯 TypeScript、零 wx.* 依赖，由 CI 门禁强制，客户端与云函数共用同一套类型与事件字典。',
+      '四选一题目由内核按种子确定性生成，干扰项取词频邻近词，离线也能出题。',
+      '新词批次按种子做 A/B 分半，B 半 7 天内不进复习队列，用于 7 天后的记忆效果后测。',
+    ],
+    technologies: ['微信小程序', 'TypeScript', 'ts-fsrs', '微信云开发', 'Vitest'],
+  },
+  {
     id: 'gugong-3d',
     title: '故宫 · 3D 漫游',
     description:
