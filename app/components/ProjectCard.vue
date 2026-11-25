@@ -5,6 +5,8 @@ import type { ProjectItem } from '~/data/site'
 defineProps<{
   project: ProjectItem
 }>()
+
+const { t } = useSiteContent()
 </script>
 
 <template>
@@ -28,7 +30,7 @@ defineProps<{
             {{ project.title }}
             <ArrowIcon class="ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none" />
           </span>
-          <span class="sr-only">（新窗口打开）</span>
+          <span class="sr-only">{{ t.newWindow }}</span>
         </a>
         <span v-else class="text-base font-medium leading-tight text-slate-200">{{ project.title }}</span>
       </h3>
@@ -43,11 +45,11 @@ defineProps<{
         rel="noreferrer noopener"
       >
         <Github class="mr-1 h-3 w-3" aria-hidden="true" />
-        <span>{{ project.sourceLabel ?? 'GitHub 仓库' }}</span>
-        <span class="sr-only">（新窗口打开）</span>
+        <span>{{ project.sourceLabel ?? t.sourceDefault }}</span>
+        <span class="sr-only">{{ t.newWindow }}</span>
       </a>
 
-      <ul class="mt-2 flex flex-wrap" aria-label="项目技术栈">
+      <ul class="mt-2 flex flex-wrap" :aria-label="t.projectStack">
         <li v-for="technology in project.technologies" :key="technology" class="mr-1.5 mt-2">
           <div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
             {{ technology }}

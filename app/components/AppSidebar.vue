@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { navigationItems, profile, socialLinks } from '~/data/site'
+const { homePath, navigationItems, profile, socialLinks, t } = useSiteContent()
 
 defineProps<{
   activeSection: string
@@ -9,12 +9,15 @@ defineProps<{
 <template>
   <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
     <div>
-      <h1
-        v-reveal="0"
-        class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl"
-      >
-        <a href="/">{{ profile.name }}</a>
-      </h1>
+      <div class="flex items-center justify-between gap-4">
+        <h1
+          v-reveal="0"
+          class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl"
+        >
+          <NuxtLink :to="homePath">{{ profile.name }}</NuxtLink>
+        </h1>
+        <LocaleSwitcher />
+      </div>
       <h2
         v-reveal="40"
         class="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl"
@@ -25,7 +28,7 @@ defineProps<{
         {{ profile.focus }}
       </p>
 
-      <nav class="hidden lg:block" aria-label="页面章节导航">
+      <nav class="hidden lg:block" :aria-label="t.sectionNav">
         <ul class="mt-16 w-max">
           <li v-for="item in navigationItems" :key="item.id">
             <a
@@ -48,7 +51,7 @@ defineProps<{
       </nav>
     </div>
 
-    <ul class="ml-1 mt-8 flex items-center" aria-label="社交媒体">
+    <ul class="ml-1 mt-8 flex items-center" :aria-label="t.socialLinks">
       <li
         v-for="social in socialLinks"
         :key="social.href"
@@ -61,7 +64,7 @@ defineProps<{
           target="_blank"
           rel="noreferrer noopener"
           :title="social.label"
-          :aria-label="`${social.label}（新窗口打开）`"
+          :aria-label="`${social.label}${t.newWindow}`"
         >
           <span class="sr-only">{{ social.label }}</span>
           <SocialIcon :name="social.icon" :size="24" />

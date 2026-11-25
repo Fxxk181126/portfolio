@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { aboutParagraphs, profile } from '~/data/site'
+const { aboutParagraphs, profile, t } = useSiteContent()
 </script>
 
 <template>
-  <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="关于我">
+  <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" :aria-label="t.about">
     <SectionHeading title="About" />
 
     <div>

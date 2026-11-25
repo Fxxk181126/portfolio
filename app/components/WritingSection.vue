@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { writingItems } from '~/data/site'
+const { writingItems, t } = useSiteContent()
 </script>
 
 <template>
-  <section id="writing" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="博客文章">
+  <section id="writing" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" :aria-label="t.writing">
     <SectionHeading title="Writing" />
 
     <ul class="group/list">
@@ -33,7 +33,7 @@ import { writingItems } from '~/data/site'
                   {{ article.title }}
                   <ArrowIcon class="ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none" />
                 </span>
-                <span class="sr-only">（新窗口打开）</span>
+                <span class="sr-only">{{ t.newWindow }}</span>
               </a>
             </h3>
           </div>

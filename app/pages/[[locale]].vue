@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { navigationItems, profile } from '~/data/site'
+const { navigationItems, profile, t } = useSiteContent()
 
 const activeSection = ref('about')
 const spotlight = ref<HTMLElement | null>(null)
@@ -86,7 +86,7 @@ onMounted(() => {
     { rootMargin: '-38% 0px -54% 0px', threshold: 0 },
   )
 
-  navigationItems.forEach(({ id }) => {
+  navigationItems.value.forEach(({ id }) => {
     const section = document.getElementById(id)
     if (section) {
       observer.observe(section)
@@ -106,7 +106,7 @@ onMounted(() => {
       aria-hidden="true"
     />
 
-    <a href="#content" class="skip-link">跳到主要内容</a>
+    <a href="#content" class="skip-link">{{ t.skipToContent }}</a>
 
     <div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
       <div

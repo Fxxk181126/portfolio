@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { projectItems } from '~/data/site'
+const { projectItems, t } = useSiteContent()
 </script>
 
 <template>
-  <section id="projects" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="精选作品">
+  <section id="projects" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" :aria-label="t.projects">
     <SectionHeading title="Projects" />
 
     <ul class="group/list">

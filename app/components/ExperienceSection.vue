@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { experienceItems } from '~/data/site'
+const { experienceItems, t } = useSiteContent()
 </script>
 
 <template>
-  <section id="experience" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="工作经历">
+  <section id="experience" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" :aria-label="t.experience">
     <SectionHeading title="Experience" />
 
     <ol class="group/list">
@@ -26,7 +26,7 @@ import { experienceItems } from '~/data/site'
                   :href="experience.organizationHref"
                   target="_blank"
                   rel="noreferrer noopener"
-                  :aria-label="`${experience.title} · ${experience.organization}（新窗口打开）`"
+                  :aria-label="`${experience.title} · ${experience.organization}${t.newWindow}`"
                 >
                   <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" aria-hidden="true" />
                   <span>
@@ -38,7 +38,7 @@ import { experienceItems } from '~/data/site'
               <div v-else>{{ experience.title }} · {{ experience.organization }}</div>
             </h3>
             <p class="mt-2 text-sm leading-normal">{{ experience.description }}</p>
-            <ul class="mt-2 flex flex-wrap" aria-label="使用技术">
+            <ul class="mt-2 flex flex-wrap" :aria-label="t.technologiesUsed">
               <li v-for="technology in experience.technologies" :key="technology" class="mr-1.5 mt-2">
                 <div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
                   {{ technology }}
