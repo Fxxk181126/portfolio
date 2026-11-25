@@ -305,29 +305,6 @@ export const projectItems: ProjectItem[] = [
     ],
     technologies: ['Three.js', 'GLSL', 'Web Audio API', 'Canvas 2D'],
   },
-  {
-    id: 'stock-platform',
-    title: 'stock 量化分析平台',
-    description:
-      '个人全栈项目，把投资规则沉淀为可回测、可可视化的系统，覆盖数据采集、策略回测、收益分析和 AI 交易计划。',
-    image: '/images/project-stock.svg',
-    imageAlt: '量化分析平台示意图，展示行情曲线、回测指标和策略信号面板',
-    highlights: [
-      '独立完成 Spring Boot、Python 与 Vue 3 的全栈交付。',
-      '实现策略规则配置、历史回测与关键指标输出。',
-      '接入 LLM 生成交易计划，形成数据到决策的闭环。',
-    ],
-    technologies: [
-      'Spring Boot',
-      'MyBatis',
-      'Python',
-      'AKShare',
-      'Vue 3',
-      'Pinia',
-      'ECharts',
-      'MySQL',
-    ],
-  },
 ]
 
 export const writingItems: WritingItem[] = [

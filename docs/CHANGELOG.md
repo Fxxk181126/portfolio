@@ -26,3 +26,7 @@
 ## 2026-11-24
 
 - feat: 作品区新增「方舟账本 Ark Ledger」「故宫 · 3D 漫游」「雷隙 THUNDERGAP」「雨夜咖啡 Cafe in the Rain」四个个人项目，排在 clipFast 之后、stock 之前，并补充四张示意图。涉及 `app/data/site.ts`、`public/images/project-ark-ledger.svg`、`public/images/project-gugong.svg`、`public/images/project-thundergap.svg`、`public/images/project-cafe-rain.svg`。
+
+## 2026-11-25
+
+- feat: 作品区下线「stock 量化分析平台」项目，并删除不再使用的示意图。涉及 `app/data/site.ts`、删除 `public/images/project-stock.svg`。
