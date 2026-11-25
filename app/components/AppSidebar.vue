@@ -9,15 +9,12 @@ defineProps<{
 <template>
   <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
     <div>
-      <div class="flex items-center justify-between gap-4">
-        <h1
-          v-reveal="0"
-          class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl"
-        >
-          <NuxtLink :to="homePath">{{ profile.name }}</NuxtLink>
-        </h1>
-        <LocaleSwitcher />
-      </div>
+      <h1
+        v-reveal="0"
+        class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl"
+      >
+        <NuxtLink :to="homePath">{{ profile.name }}</NuxtLink>
+      </h1>
       <h2
         v-reveal="40"
         class="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl"
@@ -27,9 +24,10 @@ defineProps<{
       <p v-reveal="80" class="mt-4 max-w-xs leading-normal">
         {{ profile.focus }}
       </p>
+      <LocaleSwitcher v-reveal="120" class="mt-3" />
 
       <nav class="hidden lg:block" :aria-label="t.sectionNav">
-        <ul class="mt-16 w-max">
+        <ul class="mt-9 w-max">
           <li v-for="item in navigationItems" :key="item.id">
             <a
               :href="`#${item.id}`"
@@ -51,7 +49,7 @@ defineProps<{
       </nav>
     </div>
 
-    <ul class="ml-1 mt-8 flex items-center" :aria-label="t.socialLinks">
+    <ul class="ml-1 mt-5 flex items-center lg:mt-8" :aria-label="t.socialLinks">
       <li
         v-for="social in socialLinks"
         :key="social.href"
